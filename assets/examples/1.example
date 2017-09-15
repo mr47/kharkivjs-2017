@@ -1,0 +1,3 @@
+const component = (props, context) => (
+    <div {...props}/>
+);

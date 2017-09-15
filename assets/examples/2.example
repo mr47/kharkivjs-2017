@@ -1,0 +1,5 @@
+"use strict";
+
+var component = function component(props, context) {
+  return React.createElement("div", props);
+};
