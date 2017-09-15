@@ -1,0 +1,13 @@
+const component = (props) => (
+    <div className="product">
+        <img src={props.product.image}/>
+        <div className="product-detail">
+            <p className="name">{props.product.name}</p>
+            <p className="description">{props.product.description}</p>
+            <p className="price">Price: ${props.selected.price}</p>
+            <button type="button" onClick={props.addToCart} disabled={props.inventory > 0 ? '' : 'disabled'}>
+                {props.inventory ? 'Add To Cart' : 'Sold Out'}
+            </button>
+        </div>
+    </div>
+);

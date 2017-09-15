@@ -7,6 +7,7 @@
     "clean": "rimraf dist",
     "build": "cross-env NODE_ENV=production webpack --config webpack.config.production.js",
     "lint": "eslint --ext .js,.jsx .",
+    "lint:fix": "eslint --ext .js,.jsx . --fix",
     "deploy": "npm run clean & npm run build && surge -p .",
     "start": "cross-env NODE_ENV=development node server.js"
   },
@@ -14,9 +15,9 @@
   "license": "MIT",
   "dependencies": {
     "normalize.css": "3.0.3",
-    "react": "15.4.2",
-    "react-dom": "15.4.2",
-    "spectacle": "^2.0.0"
+    "react": "15.6.1",
+    "react-dom": "15.6.1",
+    "spectacle": "^2.2.0"
   },
   "devDependencies": {
     "babel-cli": "^6.16.0",

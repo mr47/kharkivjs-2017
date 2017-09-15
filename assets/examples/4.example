@@ -1,0 +1,20 @@
+class Slider extends React.PureComponent{
+    constructor(props, context){
+        super(props, context);
+        this.state = { animated: false };
+    }
+    componentWillMount(){
+        setTimeout(
+            () => this.setState({ animated: true }),
+         400)
+    }
+    render(){
+        const { animated } = this.state;
+        const c = animated ? 'my-div--animated' : '';
+        return(
+            <div className={`my-div ${c}`}>
+                {/* ... Some code ...*/}
+            </div>
+        );
+    }
+}
