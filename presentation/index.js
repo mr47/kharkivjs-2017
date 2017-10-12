@@ -105,7 +105,7 @@ export default class Presentation extends React.Component {
           </List>
         </Slide>
         <Slide transition={["slide"]} bgColor="white">
-          <Image src={images.csr.replace("/", "")} margin="0px auto 40px" height="600px"/>
+          <Image src={images.csr.replace("/", "")} margin="0px auto 40px" height="650px"/>
         </Slide>
         <Slide transition={["slide"]} bgColor="white">
           <Image src={images.ssr2.replace("/", "")} margin="0px auto 40px" height="600px"/>
