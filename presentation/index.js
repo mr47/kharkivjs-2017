@@ -177,7 +177,7 @@ export default class Presentation extends React.Component {
               <ListItem>componentDidCatch не работает</ListItem>
               <ListItem>Порталы тоже не работают им нужен DOM</ListItem>
               <ListItem>Stream API</ListItem>
-              <ListItem>Оптимизированны варнинги c process.env.NODE_ENV !== "production"</ListItem>
+              <ListItem>Оптимизированы warnings c process.env.NODE_ENV !== "production"</ListItem>
           </List>
         </Slide>
         <Slide transition={["fade"]} bgColor="tertiary" textColor="primary">
@@ -228,7 +228,7 @@ export default class Presentation extends React.Component {
         </Slide>
         <Slide transition={["slide"]} bgColor="secondary">
             <Heading size={6} caps lineHeight={1} textColor="primary">
-                Если ы все еще хотите SSR тогда,
+                Если вы все еще хотите SSR тогда,
             </Heading>
             <Image src={images.batsword.replace("/", "")} margin="0px auto 40px" height="400px"/>
         </Slide>
@@ -258,7 +258,7 @@ export default class Presentation extends React.Component {
               <ListItem>Не используются Observers</ListItem>
               <ListItem>Reducers синхронные</ListItem>
               <ListItem>Состояние стора легко передать на клиент</ListItem>
-              <ListItem>Восстановление состояние крайне просто</ListItem>
+              <ListItem>Восстановление состояния крайне просто</ListItem>
               <ListItem>Лучшая интеграция с react-router</ListItem>
               <ListItem>Отсутствуют сайд эффекты</ListItem>
           </List>
@@ -287,13 +287,13 @@ export default class Presentation extends React.Component {
              <CodePane fit source={examples[7]} lang="jsx" style={{ fontSize: "24px" }} />
         </Slide>
         <Slide transition={["slide"]}>
-          <Heading size={1} fit caps lineHeight={1}>
-            До оптимизация
+          <Heading textColor="tertiary" size={3} lineHeight={1.5}>
+            До оптимизации
           </Heading>
           <Image src={images.beforeSsrOptimization.replace("/", "")} style={{ "height": "auto", "maxWidth": "100%" }}/>
         </Slide>
         <Slide transition={["slide"]}>
-          <Heading size={1} fit caps lineHeight={1}>
+          <Heading textColor="tertiary" size={3} lineHeight={1.5}>
             После оптимизации
           </Heading>
           <Image src={images.afterSsrOptimization.replace("/", "")} style={{ "height": "auto", "maxWidth": "100%" }}/>
