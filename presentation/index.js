@@ -177,6 +177,7 @@ export default class Presentation extends React.Component {
               <ListItem>componentDidCatch не работает</ListItem>
               <ListItem>Порталы тоже не работают им нужен DOM</ListItem>
               <ListItem>Stream API</ListItem>
+              <ListItem>Fiber</ListItem>
               <ListItem>Оптимизированы warnings c process.env.NODE_ENV !== "production"</ListItem>
           </List>
         </Slide>
