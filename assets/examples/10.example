@@ -1,0 +1,9 @@
+// и так
+res.write(renderToString([
+      <div key="1">first element</div>, 
+      <div key="2">second element</div>
+]));
+
+// и так можно :)
+res.write(renderToString("hey there"));
+res.write(renderToString(2));

@@ -1,7 +1,7 @@
 class Slider extends React.PureComponent{
     constructor(props, context){
         super(props, context);
-        this.state = { animated: false };
+        this.state = { animated: props.animated || false };
     }
     componentWillMount(){
         setTimeout(

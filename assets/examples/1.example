@@ -1,3 +1,14 @@
-const component = (props, context) => (
-    <div {...props}/>
-);
+// using Express
+import { renderToString } from "react-dom/server"
+
+import MyPage from "./MyPage"
+
+app.get("/", (req, res) => {
+  res.write("<!DOCTYPE html><html><body>");
+  res.write("<div id='content'>");
+  // render app
+  res.write( renderToString(<MyPage/>) );
+  // finish html
+  res.write("</div></body></html>");
+  res.end();
+});

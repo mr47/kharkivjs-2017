@@ -1,5 +1,4 @@
-"use strict";
+import { render } from "react-dom"
+import MyPage from "./MyPage"
 
-var component = function component(props, context) {
-  return React.createElement("div", props);
-};
+render(<MyPage/>, document.getElementById("content"));

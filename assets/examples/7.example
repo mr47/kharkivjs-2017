@@ -1,13 +1,11 @@
 const component = () => (`
     <div className="product">
-        <img src=${product_image}/>
-        <div className="product-detail">
-            <p className="name">${product_name}</p>
-            <p className="description">${product_description}</p>
-            <p className="price">Price: ${selected_price}</p>
-            <button type="button" onClick={this.addToCart} disabled={this.props.inventory > 0 ? '' : 'disabled'}>
-                {this.props.inventory ? 'Add To Cart' : 'Sold Out'}
-            </button>
-        </div>
+        <p className="description">${product_description}</p>
+        <p className="price">Цена: ${selected_price}</p>
+        <button
+            disabled={this.props.inventory > 0 ? '' : 'disabled'}
+        >
+            {this.props.inventory ? 'Купить' : 'Нет в наличии'}
+        </button>
     </div>
 `);

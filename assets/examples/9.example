@@ -1,0 +1,18 @@
+class MyArrayComponent extends React.Component {
+  render() {
+    return [
+      <div key="1">first element</div>,
+      <div key="2">second element</div>
+    ];
+  }
+}
+class MyStringComponent extends React.Component {
+  render() {
+    return "hey there";
+  }
+}
+class MyNumberComponent extends React.Component {
+  render() {
+    return 2;
+  }
+}

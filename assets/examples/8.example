@@ -1,0 +1,4 @@
+import { hydrate } from "react-dom"
+import MyPage from "./MyPage"
+
+hydrate(<MyPage/>, document.getElementById("content"));
