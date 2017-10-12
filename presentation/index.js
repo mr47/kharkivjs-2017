@@ -95,7 +95,7 @@ export default class Presentation extends React.Component {
             <Image src={images.logo.replace("/", "")} margin="40px auto 40px" height="400px"/>
         </Slide>
         <Slide transition={["fade"]} bgColor="tertiary" textColor="primary">
-          <Heading size={6} textColor="secondary" caps>Когда нужно использовать SSR</Heading>
+          <Heading size={6} textColor="secondary">Когда нужно использовать SSR</Heading>
           <List textColor="primary">
             <ListItem>SEM, SEO - Baidu, Bing, Yahoo</ListItem>
             <ListItem>Хотим наилучшую производительность</ListItem>
@@ -181,7 +181,7 @@ export default class Presentation extends React.Component {
           </List>
         </Slide>
         <Slide transition={["fade"]} bgColor="tertiary" textColor="primary">
-            <Heading size={6} textColor="secondary" caps>О чем мало кто говорит: </Heading>
+            <Heading size={6} textColor="secondary">О чем мало кто говорит: </Heading>
             <List textColor="primary">
               <ListItem>ComponentDidMount</ListItem>
               <ListItem>Компоненты не поддерживающие SSR</ListItem>
@@ -215,25 +215,25 @@ export default class Presentation extends React.Component {
           </BlockQuote>
         </Slide>
         <Slide transition={["fade"]} bgColor="primary">
-             <Heading size={6} textColor="secondary" caps>Пример проблемы</Heading>
+             <Heading size={6} textColor="secondary">Пример проблемы</Heading>
              <CodePane fit source={examples[4]} lang="jsx" style={{ fontSize: "24px" }} />
         </Slide>
         <Slide transition={["slide"]} bgColor="primary">
-          <Heading size={6} line textColor="secondary" caps lineHeight={1.5} >Promise rejection</Heading>
+          <Heading size={6} line textColor="secondary" lineHeight={1.5} >Promise rejection</Heading>
           <Image src={images.promiseReject2.replace("/", "")} margin="0px auto 10px" fit/>
         </Slide>
         <Slide transition={["slide"]} bgColor="primary">
-              <Heading size={6} line textColor="secondary" caps lineHeight={1.5} >Promise rejection</Heading>
+              <Heading size={6} line textColor="secondary" lineHeight={1.5} >Promise rejection</Heading>
               <Image src={images.promiseReject.replace("/", "")} margin="0px auto 10px" fit/>
         </Slide>
         <Slide transition={["slide"]} bgColor="secondary">
-            <Heading size={6} caps lineHeight={1} textColor="primary">
+            <Heading size={6} lineHeight={1} textColor="primary">
                 Если вы все еще хотите SSR тогда,
             </Heading>
             <Image src={images.batsword.replace("/", "")} margin="0px auto 40px" height="400px"/>
         </Slide>
         <Slide transition={["fade"]} bgColor="tertiary" textColor="primary">
-              <Heading size={6} textColor="secondary" caps>Что же нам поможет: </Heading>
+              <Heading size={6} textColor="secondary" >Что же нам поможет: </Heading>
               <List textColor="primary">
                   <ListItem>redux</ListItem>
                   <ListItem>react-router</ListItem>
@@ -252,7 +252,7 @@ export default class Presentation extends React.Component {
           </BlockQuote>
         </Slide>
         <Slide transition={["fade"]} bgColor="tertiary" textColor="primary">
-          <Heading size={6} textColor="secondary" caps>Почему Redux: </Heading>
+          <Heading size={6} textColor="secondary">Почему Redux: </Heading>
           <List textColor="primary">
               <ListItem>Pure js (для нас SSR из коробки)</ListItem>
               <ListItem>Не используются Observers</ListItem>
@@ -264,10 +264,10 @@ export default class Presentation extends React.Component {
           </List>
         </Slide>
         <Slide transition={["fade"]} bgColor="tertiary" textColor="primary">
-          <Heading size={6} сaps>Решение для Promises - react-jobs</Heading>
+          <Heading size={6} сaps>Решение для data fetch (promises hell) - react-jobs</Heading>
         </Slide>
         <Slide transition={["fade"]} bgColor="tertiary" textColor="primary">
-            <Heading size={6} textColor="secondary" caps>React-server: </Heading>
+            <Heading size={6} textColor="secondary">React-server: </Heading>
             <List textColor="primary">
                 <ListItem>Параллельные запросы к серверу</ListItem>
                 <ListItem>Сжатие данных для клиента</ListItem>
@@ -302,7 +302,7 @@ export default class Presentation extends React.Component {
             <Image src={images.beautify.replace("/", "")} fit/>
         </Slide>
         <Slide transition={["fade"]} bgColor="tertiary" textColor="primary">
-          <Heading size={6} textColor="secondary" caps>Альтернативы: </Heading>
+          <Heading size={6} textColor="secondary">Альтернативы: </Heading>
           <List textColor="primary">
               <ListItem>CSR (client side rendering )</ListItem>
               <ListItem>Next.js (static generator)</ListItem>
