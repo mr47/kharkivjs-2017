@@ -31,7 +31,7 @@ require("spectacle/lib/themes/default/index.css");
 
 const images = {
     intro: require("../assets/bg-intro.png"),
-    speaker: require("../assets/poddubniy.png"),
+    speaker: require("../assets/myname.png"),
     logoConf: require("../assets/logo-conf.png"),
     partners: require("../assets/partners.png"),
     city: require("../assets/city.jpg"),
@@ -85,12 +85,13 @@ export default class Presentation extends React.Component {
         return (
       <Deck transition={["zoom", "slide"]} contentHeight={860} contentWidth={1100} transitionDuration={500} theme={theme}>
         <Slide transition={["fade"]} bgImage={images.intro.replace("/", "")} maxHeight={768} maxWidth={1280}>
-            <Heading size={1} fit lineHeight={1} textColor="quartenary">
+            <Heading size={1} fit lineHeight={2} textColor="quartenary">
                 Нужен ли вам React SSR ?
             </Heading>
+            <Image src={images.speaker.replace("/", "")} height="200px" style={{ "position": "absolute", "left": "-15vw", "top": "35vh" }}/>
             <Image src={images.logoConf.replace("/", "")} height="200px" style={{ "position": "absolute", "left": "-15vw", "top": "-45vh" }}/>
             <Image src={images.partners.replace("/", "")} height="70px" style={{ "width": "100vw", "position": "absolute", "left": "-30vw", "bottom": "-50vh" }}/>
-            <Image src={images.partners.replace("/", "")} height="70px" style={{ "width": "100vw", "position": "absolute", "left": "-30vw", "bottom": "-50vh" }}/>
+            <Image src={images.partners.replace("/", "")} height="70px" style={{ "width": "100vw", "position": "absolute", "left": "20vw", "bottom": "-50vh" }}/>
         </Slide>
         {/*<Slide transition={["zoom"]} bgColor="primary">*/}
           {/*<Heading size={1} fit lineHeight={1} textColor="secondary">*/}
