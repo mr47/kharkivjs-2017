@@ -2,6 +2,7 @@
 import React from "react";
 
 // Import Spectacle Core tags
+import ImageSlide from "spectacle-image-slide";
 import {
   BlockQuote,
   Cite,
@@ -29,6 +30,10 @@ require("spectacle/lib/themes/default/index.css");
 // TODO: меньше кода (подчистить) только то что важно
 
 const images = {
+    intro: require("../assets/bg-intro.png"),
+    speaker: require("../assets/poddubniy.png"),
+    logoConf: require("../assets/logo-conf.png"),
+    partners: require("../assets/partners.png"),
     city: require("../assets/city.jpg"),
     kat: require("../assets/kat.png"),
     logo: require("../assets/new/mr47.png"),
@@ -79,15 +84,23 @@ export default class Presentation extends React.Component {
     render() {
         return (
       <Deck transition={["zoom", "slide"]} contentHeight={860} contentWidth={1100} transitionDuration={500} theme={theme}>
-        <Slide transition={["zoom"]} bgColor="primary">
-          <Heading size={1} fit lineHeight={1} textColor="secondary">
-            Нужен ли вам React SSR ?
-          </Heading>
-          <Text margin="10px 0 0" textColor="tertiary" size={1} fit bold>
-            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; introduction to react ssr
-          </Text>
-          <Image src={images.v16.replace("/", "")} height="200px" style={{ "position": "absolute", "left": "3%", top: "27%", "transform": "rotate(30deg)" }}/>
+        <Slide transition={["fade"]} bgImage={images.intro.replace("/", "")} maxHeight={768} maxWidth={1280}>
+            <Heading size={1} fit lineHeight={1} textColor="quartenary">
+                Нужен ли вам React SSR ?
+            </Heading>
+            <Image src={images.logoConf.replace("/", "")} height="200px" style={{ "position": "absolute", "left": "-15vw", "top": "-45vh" }}/>
+            <Image src={images.partners.replace("/", "")} height="70px" style={{ "width": "100vw", "position": "absolute", "left": "-30vw", "bottom": "-50vh" }}/>
+            <Image src={images.partners.replace("/", "")} height="70px" style={{ "width": "100vw", "position": "absolute", "left": "-30vw", "bottom": "-50vh" }}/>
         </Slide>
+        {/*<Slide transition={["zoom"]} bgColor="primary">*/}
+          {/*<Heading size={1} fit lineHeight={1} textColor="secondary">*/}
+            {/*Нужен ли вам React SSR ?*/}
+          {/*</Heading>*/}
+          {/*<Text margin="10px 0 0" textColor="tertiary" size={1} fit bold>*/}
+            {/*&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; introduction to react ssr*/}
+          {/*</Text>*/}
+          {/*<Image src={images.v16.replace("/", "")} height="200px" style={{ "position": "absolute", "left": "3%", top: "27%", "transform": "rotate(30deg)" }}/>*/}
+        {/*</Slide>*/}
         <Slide transition={["slide"]} bgColor="secondary">
             <Heading size={6} lineHeight={1} textColor="primary">
                 Dmitry Poddubniy a.k.a <Text textColor="tertiary">@mr47</Text>
@@ -161,12 +174,6 @@ export default class Presentation extends React.Component {
               Arrays, Strings, Numbers
           </Heading>
           <CodePane source={examples[9]} lang="jsx" style={{ fontSize: "22px", width: "100%", height: "640px" }} />
-        </Slide>
-        <Slide transition={["fade"]} bgColor="primary">
-          <Heading size={4} lineHeight={2} textColor="secondary">
-              Render -> Hydrate
-          </Heading>
-          <CodePane source={examples[8]} lang="jsx" style={{ fontSize: "22px", width: "100%", height: "200px" }} />
         </Slide>
         <Slide transition={["fade"]} bgColor="tertiary">
           <Heading size={6} textColor="secondary" margin="0px 0px 10% 0px">Для SSR в React 16.0.0:</Heading>
