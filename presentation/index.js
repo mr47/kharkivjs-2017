@@ -10,6 +10,7 @@ import {
   Heading,
   ListItem,
   List,
+  Link,
   Quote,
   Slide,
   Text,
@@ -31,6 +32,7 @@ require("spectacle/lib/themes/default/index.css");
 
 const images = {
     intro: require("../assets/bg-intro.png"),
+    intro2: require("../assets/kharkivjs-intro.png"),
     speaker: require("../assets/myname.png"),
     logoConf: require("../assets/logo-conf.png"),
     partners: require("../assets/partners.png"),
@@ -52,7 +54,8 @@ const images = {
     v16: require("../assets/Censored_rubber_stamp.svg"),
     promiseReject2: require("../assets/08-server-side-rendering-3-opt.png"),
     ssr2: require("../assets/ssr.png"),
-    csr: require("../assets/csr.png")
+    csr: require("../assets/csr.png"),
+    qrCode: require("../assets/new/qr-code.gif")
 };
 
 const examples = {
@@ -65,7 +68,8 @@ const examples = {
     7: require("../assets/examples/7.example"),
     8: require("../assets/examples/8.example"),
     9: require("../assets/examples/9.example"),
-    10: require("../assets/examples/10.example")
+    10: require("../assets/examples/10.example"),
+    11: require("../assets/examples/11.example")
 };
 
 preloader(images);
@@ -84,15 +88,17 @@ export default class Presentation extends React.Component {
     render() {
         return (
       <Deck transition={["zoom", "slide"]} contentHeight={860} contentWidth={1100} transitionDuration={500} theme={theme}>
-        <Slide transition={["fade"]} bgImage={images.intro.replace("/", "")} maxHeight={768} maxWidth={1280}>
-            <Heading size={1} fit lineHeight={2} textColor="quartenary">
-                Нужен ли вам React SSR ?
-            </Heading>
-            <Image src={images.speaker.replace("/", "")} height="200px" style={{ "position": "absolute", "left": "-15vw", "top": "35vh" }}/>
-            <Image src={images.logoConf.replace("/", "")} height="200px" style={{ "position": "absolute", "left": "-15vw", "top": "-45vh" }}/>
-            <Image src={images.partners.replace("/", "")} height="70px" style={{ "width": "100vw", "position": "absolute", "left": "-30vw", "bottom": "-50vh" }}/>
-            <Image src={images.partners.replace("/", "")} height="70px" style={{ "width": "100vw", "position": "absolute", "left": "20vw", "bottom": "-50vh" }}/>
-        </Slide>
+          <Slide transition={["fade"]} bgImage={images.intro2.replace("/", "")} maxHeight={768} maxWidth={1280}>
+          </Slide>
+
+         {/*<Slide transition={["fade"]} bgImage={images.intro.replace("/", "")} maxHeight={768} maxWidth={1280}>*/}
+            {/*<Heading size={1} fit lineHeight={2} textColor="quartenary">*/}
+                {/*Нужен ли вам React SSR ?*/}
+            {/*</Heading>*/}
+            {/*<Image src={images.logoConf.replace("/", "")} height="200px" style={{ "position": "absolute", "left": "-15vw", "top": "-40vh" }}/>*/}
+            {/*<Image src={images.partners.replace("/", "")} height="70px" style={{ "width": "100vw", "position": "absolute", "left": "-30vw", "bottom": "-40vh" }}/>*/}
+            {/*<Image src={images.partners.replace("/", "")} height="70px" style={{ "width": "100vw", "position": "absolute", "left": "30vw", "bottom": "-40vh" }}/>*/}
+        {/*</Slide>*/}
         {/*<Slide transition={["zoom"]} bgColor="primary">*/}
           {/*<Heading size={1} fit lineHeight={1} textColor="secondary">*/}
             {/*Нужен ли вам React SSR ?*/}
@@ -275,6 +281,9 @@ export default class Presentation extends React.Component {
         <Slide transition={["fade"]} bgColor="tertiary" textColor="primary">
           <Heading size={6} сaps>Решение для data fetch (promises hell) - react-jobs</Heading>
         </Slide>
+        <Slide transition={["fade"]} bgColor="primary">
+          <CodePane fit source={examples[11]} lang="jsx" style={{ fontSize: "24px" }} />
+        </Slide>
         <Slide transition={["fade"]} bgColor="tertiary" textColor="primary">
             <Heading size={6} textColor="secondary">React-server: </Heading>
             <List textColor="primary">
@@ -330,6 +339,19 @@ export default class Presentation extends React.Component {
             Увидимся в будущем!
           </Heading>
           <Image src={images.sia.replace("/", "")} margin="0px auto 40px" height="400px"/>
+        </Slide>
+        <Slide transition={["fade"]} bgColor="secondary" textColor="primary">
+          <Heading size={6} textColor="primary" >Ccылки: </Heading>
+          <List textColor="primary">
+              <ListItem>{`mr47.in`}</ListItem>
+              <ListItem>{`github.com/mr47/kharkivjs-2017`}</ListItem>
+              <ListItem><Link textColor="primary" href={'https://github.com/redfin/react-server'}>react-server</Link></ListItem>
+              <ListItem><Link textColor="primary" href={'https://github.com/kadirahq/react-no-ssr'}>no-ssr component</Link></ListItem>
+              <ListItem><Link textColor="primary" href={'https://github.com/ctrlplusb/react-jobs'}>react-jobs</Link></ListItem>
+              <ListItem><Link textColor="primary" href={'https://github.com/walmartlabs/react-ssr-optimization'}>react-ssr-optimization</Link></ListItem>
+              <ListItem><Link textColor="primary" href={'https://dou.ua/lenta/articles/react-fiber/'}>Fiber</Link></ListItem>
+          </List>
+          <Image src={images.qrCode.replace("/", "")} style={{"position": "absolute", "left": "65vw", "top": "20vh"}} height="400px"/>
         </Slide>
       </Deck>
         );

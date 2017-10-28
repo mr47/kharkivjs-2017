@@ -1,0 +1,5 @@
+export default withJob({
+  work: (props) => fetch(`/cat/${props.catId}`).then(r => r.json()),
+  LoadingComponent: (props) => <div>Fetching cat...</div>,
+  ErrorComponent: ({ error }) => <div>Opps! {error.message}</div>
+})(Cat)
